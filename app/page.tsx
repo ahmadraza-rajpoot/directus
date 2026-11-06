@@ -15,13 +15,13 @@ export default function Home() {
 
   const queryClient = useQueryClient();
 
-  // Fetch products
+ 
   const { data, error, isLoading } = useQuery({
     queryKey: ['product_data'],
     queryFn: getProductData,
   });
 
-  // Create product
+ 
   const mutation = useMutation({
     mutationFn: createProduct,
 
@@ -50,7 +50,7 @@ export default function Home() {
   if (error) return <div>Something went wrong.</div>;
 
   return (
-    <main className="min-h-screen bg-zinc-50 px-6 py-12 dark:bg-black">
+    <main className="min-h-screen bg-zinc-100 px-6 py-12 dark:bg-black">
 
       <ProductForm onSubmit={handleSubmit} />
 
